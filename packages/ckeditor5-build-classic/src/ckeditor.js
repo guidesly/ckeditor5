@@ -29,8 +29,14 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
-
-export default class ClassicEditor extends ClassicEditorBase {}
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';     // <--- ADDED
+import Font from '@ckeditor/ckeditor5-font/src/font';
+import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily';
+import FontSize from '@ckeditor/ckeditor5-font/src/fontsize';
+import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
+import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor';
+import Title from '@ckeditor/ckeditor5-heading/src/title';
+export default class ClassicEditor extends ClassicEditorBase { }
 
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
@@ -56,17 +62,21 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	TextTransformation
+	TextTransformation,
+	Alignment,
+	Font,
+	FontFamily, FontSize, FontColor, FontBackgroundColor, Title
 ];
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
 	toolbar: {
 		items: [
-			'heading',
+			'heading', 'title',
 			'|',
 			'bold',
 			'italic',
+			'fontbackgroundcolor', 'fontFamily', 'fontColor', 'fontSize',
 			'link',
 			'bulletedList',
 			'numberedList',
@@ -79,7 +89,7 @@ ClassicEditor.defaultConfig = {
 			'insertTable',
 			'mediaEmbed',
 			'undo',
-			'redo'
+			'redo', 'alignment'
 		]
 	},
 	image: {
