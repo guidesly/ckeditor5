@@ -65,14 +65,14 @@ ClassicEditor.builtinPlugins = [
 	TextTransformation,
 	Alignment,
 	Font,
-	FontFamily, FontSize, FontColor, FontBackgroundColor, Title
+	FontFamily, FontSize, FontColor, FontBackgroundColor
 ];
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
 	toolbar: {
 		items: [
-			'heading', 'title',
+			'heading', 
 			'|',
 			'bold',
 			'italic',
