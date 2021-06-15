@@ -1,6 +1,6 @@
 {
   "name": "guidesly-ckeditor5-build-classic",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "The classic editor build of CKEditor 5 – the best browser-based rich text editor.",
   "keywords": [
     "ckeditor5-build",
@@ -78,5 +78,7 @@
   "directories": {
     "test": "tests"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@ckeditor/ckeditor5-html-embed": "^23.1.0"
+  }
 }

@@ -38,6 +38,7 @@ import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
 import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor';
 import Title from '@ckeditor/ckeditor5-heading/src/title';
 import LinkImage from '@ckeditor/ckeditor5-link/src/linkimage';
+import HtmlEmbed from '@ckeditor/ckeditor5-html-embed/src/htmlembed';
 export default class ClassicEditor extends ClassicEditorBase { }
 
 // Plugins to include in the build.
@@ -68,7 +69,7 @@ ClassicEditor.builtinPlugins = [
 	TextTransformation,
 	Alignment,
 	Font,
-	FontFamily, FontSize, FontColor, FontBackgroundColor
+	FontFamily, FontSize, FontColor, FontBackgroundColor,HtmlEmbed
 ];
 
 // Editor configuration.
@@ -88,7 +89,7 @@ ClassicEditor.defaultConfig = {
 			'outdent',
 			'|',
 			'imageUpload',
-
+			'htmlEmbed',
 			'blockQuote',
 			'insertTable',
 			'mediaEmbed',
